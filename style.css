@@ -1,0 +1,46 @@
+/* style.css */
+
+/* Ensure the Inter font is applied as a base, complementing Tailwind */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Tailwind handles most styling, but global fallbacks or overrides can go here */
+}
+
+/* Shake animation for incorrect password feedback */
+.shake-animation {
+    /* Apply the 'shake' keyframe animation */
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+    /* Improve rendering performance for animations */
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Keyframes for the shake animation */
+@keyframes shake {
+    /* Define the transform states at different points in the animation */
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+/* You can add more global custom styles here if needed.
+   For example, if you want a very specific style for all buttons
+   that Tailwind doesn't easily provide, or for elements not
+   easily targetable by Tailwind utility classes. */
+
+/* Example of a custom utility (though Tailwind often covers these) */
+/*
+.custom-debug-border {
+    border: 1px solid red !important;
+}
+*/

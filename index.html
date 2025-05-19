@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Message For You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Custom Tailwind configuration (optional, but good for specific theming)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'], // Use Inter as the default sans-serif font
+                    },
+                    colors: {
+                        'custom-pink': '#f8c2d8',      // A soft pink
+                        'custom-purple': '#d8b4fe',    // A gentle purple
+                        'custom-gray': '#f3f4f6',      // Light background gray
+                        'custom-dark-gray': '#4b5563', // For text
+                        'custom-error': '#ef4444',     // Error message red
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-custom-pink via-white to-custom-purple min-h-screen flex items-center justify-center font-inter p-4">
+
+    <div class="bg-white p-8 sm:p-12 rounded-xl shadow-2xl w-full max-w-md text-center">
+        <h1 class="text-3xl sm:text-4xl font-bold text-custom-purple mb-6">A Special Message Just For You</h1>
+        
+        <p class="text-lg text-custom-dark-gray mb-8">Please enter the password to continue Madammm Ji</p>
+
+        <input type="password" id="passwordInput" placeholder="Enter Password Here" class="w-full px-4 py-3 mb-4 border-2 border-custom-purple rounded-lg focus:ring-2 focus:ring-custom-pink focus:border-transparent outline-none transition-all duration-300 ease-in-out shadow-sm text-lg">
+        
+        <button id="submitButton" class="w-full bg-custom-purple hover:bg-opacity-80 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out text-lg transform hover:scale-105">
+            Unlock Message
+        </button>
+        
+        <p id="errorMessage" class="mt-6 text-custom-error font-medium text-sm h-6"></p> </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

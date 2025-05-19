@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Staybacks 🕰️🌙</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="memory2.css"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Custom Tailwind configuration (consistent with other pages)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-bg-start': '#231942',
+                        'brand-bg-end': '#5e548e',
+                        'content-box-bg': 'rgba(0, 0, 0, 0.85)', 
+                        'content-box-text-primary': '#ffffff',
+                        'content-box-text-secondary': '#e5e7eb',
+                        'image-bg': 'rgba(255, 255, 255, 0.03)', // Slightly different for image container
+                        'button-match-bg': '#231942',
+                        'button-match-text': '#ffffff',
+                        'button-match-border': '#5e548e',
+                        'button-match-hover-bg': '#3c2c6b',
+                        'button-match-hover-text': '#ffffff',
+                        'button-match-hover-border': '#f0a6ca',
+                        'brand-accent-pink': '#f0a6ca',     
+                        'brand-accent-glow': 'rgba(240, 166, 202, 0.2)',
+                        'brand-shadow': 'rgba(0, 0, 0, 0.2)',
+                        'footer-text-light': '#e0d8f5',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s 0.3s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: 0, transform: 'translateY(20px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter overflow-hidden">
+
+    <canvas id="cuteCanvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+
+    <div class="min-h-screen flex flex-col items-center justify-center p-4 text-center relative z-10">
+        
+        <div class="bg-content-box-bg backdrop-blur-md p-6 sm:p-8 rounded-xl shadow-2xl w-full max-w-4xl animate-fade-in-up 
+                    flex flex-col max-h-[90vh]">
+            
+            <div id="memoryTitleSection" class="flex-shrink-0 mb-4 sm:mb-6 border-b border-gray-700 pb-3 sm:pb-4">
+                <h1 class="text-3xl sm:text-4xl font-bold text-brand-accent-pink">
+                    Our Staybacks 🕰️🌙
+                </h1>
+            </div>
+
+            <div id="memoryDetailContent" class="flex-grow flex flex-col md:flex-row text-left md:space-x-6 overflow-hidden">
+                
+                <div class="w-full md:w-2/5 lg:w-1/2 flex-shrink-0 mb-4 md:mb-0 p-2 bg-image-bg rounded-lg flex items-center justify-center">
+                    <img src="../../Images/memory2.jpg" 
+                         alt="A memory from one of our staybacks"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x800/231942/e0d8f5?text=Image+Missing';"
+                         class="w-auto h-auto max-w-full max-h-[50vh] md:max-h-[calc(80vh-200px)] object-contain rounded-md">
+                </div>
+
+                <div class="w-full md:w-3/5 lg:w-1/2 flex flex-col overflow-hidden">
+                    <div class="flex-grow space-y-3 sm:space-y-4 overflow-y-auto custom-scrollbar pr-3 md:pr-4 py-1">
+                        <p class="text-content-box-text-primary text-base sm:text-lg leading-relaxed">
+                            Well my madam jiii,i do remeber our staybacks,which were for studying but the reason why i always came was never studying it was youu my cutuuuuu youuu youuu youuu<3
+                        </p>
+                        <p class="text-content-box-text-secondary text-sm sm:text-base leading-relaxed">
+                            We studied obv ek sath but it was more about being with you,while studying i still remeber our one of the first staybacks when you were not feeling well and all i could think about was how i can help you to feel better
+                        </p>
+                        <p class="text-content-box-text-secondary text-sm sm:text-base leading-relaxed">
+                            Studying together in that class made easier calmer felt like this things are achievable and uska reason was justtt youuu Ayuuu the fact you were with meee
+                        </p>
+                        <p class="text-content-box-text-secondary text-sm sm:text-base leading-relaxed">
+                            One of those days for stayback when i gave you the chocolate about how the same day in stayback we were holding hands and studying ek sath never imagined aisa moment but i am very very grateful.
+                        </p>
+                        <p class="text-content-box-text-secondary text-sm sm:text-base leading-relaxed">
+                            I loveeee youuuu Ayuuu my bachaa🫶🫶🫶🫶🫶🫶
+                            
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-shrink-0 mt-auto pt-4 sm:pt-6 border-t border-gray-700">
+                <button id="backToMemoriesButton"
+                        class="w-full sm:w-auto bg-button-match-bg text-button-match-text border border-button-match-border
+                               hover:bg-button-match-hover-bg hover:border-button-match-hover-border
+                               text-lg font-semibold py-3 px-6 sm:px-8 rounded-lg shadow-md transition-all duration-300 ease-in-out
+                               transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent-pink focus:ring-offset-2 focus:ring-offset-black">
+                    &larr; Back to Memories
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../memory_detail_shared.js"></script> 
+</body>
+</html>

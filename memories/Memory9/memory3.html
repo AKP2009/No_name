@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Most Scary Day 😨</title> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="memory3.css"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Custom Tailwind configuration (consistent with other pages)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-bg-start': '#231942',
+                        'brand-bg-end': '#5e548e',
+                        'content-box-bg': 'rgba(0, 0, 0, 0.85)', 
+                        'content-box-text-primary': '#ffffff',
+                        'content-box-text-secondary': '#e5e7eb',
+                        'image-bg': 'rgba(255, 255, 255, 0.03)',
+                        'button-match-bg': '#231942',
+                        'button-match-text': '#ffffff',
+                        'button-match-border': '#5e548e',
+                        'button-match-hover-bg': '#3c2c6b',
+                        'button-match-hover-text': '#ffffff',
+                        'button-match-hover-border': '#f0a6ca',
+                        'brand-accent-pink': '#f0a6ca',     
+                        'brand-accent-glow': 'rgba(240, 166, 202, 0.2)',
+                        'brand-shadow': 'rgba(0, 0, 0, 0.2)',
+                        'footer-text-light': '#e0d8f5',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s 0.3s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: 0, transform: 'translateY(20px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter overflow-hidden">
+
+    <canvas id="cuteCanvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+
+    <div class="min-h-screen flex flex-col items-center justify-center p-4 text-center relative z-10">
+        
+        <div class="bg-content-box-bg backdrop-blur-md p-6 sm:p-8 rounded-xl shadow-2xl w-full max-w-4xl animate-fade-in-up 
+                    flex flex-col max-h-[90vh]">
+            
+            <div id="memoryTitleSection" class="flex-shrink-0 mb-4 sm:mb-6 border-b border-gray-700 pb-3 sm:pb-4">
+                <h1 class="text-3xl sm:text-4xl font-bold text-brand-accent-pink">
+                    Theeee mosttt scaryyy dayyy 😨
+                </h1>
+            </div>
+
+            <div id="memoryDetailContent" class="flex-grow text-left overflow-y-auto custom-scrollbar pr-2">
+                
+                <div class="memory-section flex flex-col md:flex-row items-center md:space-x-6 mb-8 md:mb-12">
+                    <div class="image-container w-full md:w-2/5 lg:w-1/2 flex-shrink-0 mb-4 md:mb-0 p-2 bg-image-bg rounded-lg flex items-center justify-center">
+                        <img src="../../Images/memory31.jpg" 
+                             alt="First part of the scary day memory"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x400/231942/e0d8f5?text=Image+1+Missing';"
+                             class="memory-image">
+                    </div>
+                    <div class="text-container w-full md:w-3/5 lg:w-1/2 space-y-3">
+                        <p class="text-content-box-text-primary text-base sm:text-lg leading-relaxed">
+                            (Your text for the first part of the memory, describing what happened leading up to or during the first image...)
+                        </p>
+                        <p class="text-content-box-text-secondary text-sm sm:text-base leading-relaxed">
+                            (More details, feelings, or thoughts related to the first image and this part of the story...)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="memory-section flex flex-col md:flex-row-reverse items-center md:space-x-6 md:space-x-reverse mb-8 md:mb-12">
+                    <div class="image-container w-full md:w-2/5 lg:w-1/2 flex-shrink-0 mb-4 md:mb-0 p-2 bg-image-bg rounded-lg flex items-center justify-center">
+                        <img src="../../Images/memory32.jpg" 
+                             alt="Second part of the scary day memory"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x400/231942/e0d8f5?text=Image+2+Missing';"
+                             class="memory-image">
+                    </div>
+                    <div class="text-container w-full md:w-3/5 lg:w-1/2 space-y-3">
+                        <p class="text-content-box-text-primary text-base sm:text-lg leading-relaxed">
+                            (Your text for the second part of the memory, corresponding to the second image. This might be the resolution or aftermath...)
+                        </p>
+                        <p class="text-content-box-text-secondary text-sm sm:text-base leading-relaxed">
+                            (Further reflections or details about this part of the memory...)
+                        </p>
+                    </div>
+                </div>
+
+                </div>
+
+            <div class="flex-shrink-0 mt-auto pt-4 sm:pt-6 border-t border-gray-700">
+                <button id="backToMemoriesButton"
+                        class="w-full sm:w-auto bg-button-match-bg text-button-match-text border border-button-match-border
+                               hover:bg-button-match-hover-bg hover:border-button-match-hover-border
+                               text-lg font-semibold py-3 px-6 sm:px-8 rounded-lg shadow-md transition-all duration-300 ease-in-out
+                               transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent-pink focus:ring-offset-2 focus:ring-offset-black">
+                    &larr; Back to Memories
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../memory_detail_shared.js"></script> 
+</body>
+</html>

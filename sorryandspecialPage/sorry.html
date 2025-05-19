@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Sincere Apology</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sorry.css"> <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Custom Tailwind configuration (consistent with other pages)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Background animation colors
+                        'brand-bg-start': '#231942',
+                        'brand-bg-end': '#5e548e',
+                        
+                        // Content Box Colors
+                        'content-box-bg': 'rgba(0, 0, 0, 0.85)', 
+                        'content-box-text-primary': '#ffffff',
+                        'content-box-text-secondary': '#e5e7eb',
+
+                        // Button Colors (using the background-matched style from homepage)
+                        'button-match-bg': '#231942',
+                        'button-match-text': '#ffffff',
+                        'button-match-border': '#5e548e',
+                        'button-match-hover-bg': '#3c2c6b',
+                        'button-match-hover-text': '#ffffff',
+                        'button-match-hover-border': '#f0a6ca',
+                        
+                        // Accent Colors
+                        'brand-accent-pink': '#f0a6ca',     
+                        'brand-accent-glow': 'rgba(240, 166, 202, 0.2)',
+                        'brand-shadow': 'rgba(0, 0, 0, 0.2)',
+
+                        'footer-text-light': '#e0d8f5',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s 0.3s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: 0, transform: 'translateY(20px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter overflow-hidden">
+
+    <canvas id="cuteCanvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+
+    <div class="min-h-screen flex flex-col items-center justify-center p-4 text-center relative z-10">
+        
+        <div class="bg-content-box-bg backdrop-blur-md p-6 sm:p-8 rounded-xl shadow-2xl w-full max-w-2xl animate-fade-in-up
+                    flex flex-col max-h-[90vh]">
+            
+            <div id="introSection" class="flex-shrink-0 mb-6 border-b border-gray-700 pb-4 text-left">
+                <h1 class="text-3xl sm:text-4xl font-bold text-brand-accent-pink mb-3 text-center">
+                    From The Bottom Of My Heart... 😔
+                </h1>
+                <p class="text-content-box-text-secondary text-sm sm:text-base leading-relaxed text-center">
+                    (Here you can write a brief intro to your apology, setting the tone.)
+                </p>
+            </div>
+
+            <div id="apologyContent" class="flex-grow text-left space-y-4 overflow-y-auto pr-2 custom-scrollbar">
+                <div class="p-4 bg-white/5 rounded-lg">
+                    <p class="text-content-box-text-primary text-base leading-relaxed">
+                        My dearest,
+                        <br><br>
+                        Words can't fully express how sorry I am. I've been doing a lot of thinking, and I realize... 
+                        (This is where your heartfelt apology will go. Be specific, be sincere.)
+                        <br><br>
+                        I value you more than you know, and the thought of hurting you...
+                        <br><br>
+                        Please know that...
+                        <br><br>
+                        With all my love and deepest regrets,
+                        <br>
+                        (Your Name/Nickname)
+                    </p>
+                </div>
+                </div>
+
+            <div class="flex-shrink-0 mt-auto pt-6 border-t border-gray-700">
+                <button id="backButton"
+                        class="w-full sm:w-auto bg-button-match-bg text-button-match-text border border-button-match-border
+                               hover:bg-button-match-hover-bg hover:border-button-match-hover-border
+                               text-lg font-semibold py-3 px-8 rounded-lg shadow-md transition-all duration-300 ease-in-out
+                               transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent-pink focus:ring-offset-2 focus:ring-offset-black">
+                    Back to Steps
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="sorry.js"></script> </body>
+</html>
+
+

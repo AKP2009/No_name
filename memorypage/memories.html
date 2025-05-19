@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Sweet Memories</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="memories.css"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Custom Tailwind configuration (consistent with other pages)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Background animation colors
+                        'brand-bg-start': '#231942',
+                        'brand-bg-end': '#5e548e',
+                        
+                        // Content Box Colors
+                        'content-box-bg': 'rgba(0, 0, 0, 0.85)', 
+                        'content-box-text-primary': '#ffffff',
+                        'content-box-text-secondary': '#e5e7eb',
+
+                        // Button Colors (using the background-matched style from homepage)
+                        'button-match-bg': '#231942',
+                        'button-match-text': '#ffffff',
+                        'button-match-border': '#5e548e',
+                        'button-match-hover-bg': '#3c2c6b',
+                        'button-match-hover-text': '#ffffff',
+                        'button-match-hover-border': '#f0a6ca',
+
+                        // Memory Item Link Colors
+                        'memory-item-bg': 'rgba(255, 255, 255, 0.05)',
+                        'memory-item-hover-bg': 'rgba(255, 255, 255, 0.1)',
+                        'memory-item-text': '#f0a6ca', // brand-accent-pink for titles
+                        
+                        // Accent Colors
+                        'brand-accent-pink': '#f0a6ca',     
+                        'brand-accent-glow': 'rgba(240, 166, 202, 0.2)',
+                        'brand-shadow': 'rgba(0, 0, 0, 0.2)',
+
+                        'footer-text-light': '#e0d8f5',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s 0.3s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: 0, transform: 'translateY(20px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter overflow-hidden">
+
+    <canvas id="cuteCanvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+
+    <div class="min-h-screen flex flex-col items-center justify-center p-4 text-center relative z-10">
+        
+        <div class="bg-content-box-bg backdrop-blur-md p-6 sm:p-8 rounded-xl shadow-2xl w-full max-w-2xl animate-fade-in-up 
+                    flex flex-col max-h-[90vh]"> 
+            
+            <div id="introSection" class="flex-shrink-0 mb-6 border-b border-gray-700 pb-4 text-left">
+                <h1 class="text-3xl sm:text-4xl font-bold text-brand-accent-pink mb-3 text-center">
+                    Memoriessssss my Cutuu ✨
+                </h1>
+                <p class="text-content-box-text-secondary text-sm sm:text-base leading-relaxed">
+                    ( Ik mera bachaa that after so many fights for so long time , at this point memories ke naam par sirf bad and fights and faltu cheeze hi yaad hai Buttt buttt this is me trying to show youuuu kiii goooddd thinggs bhi thi and it wasn't all bad my sweeeetuuu ! ! )
+                </p>
+            </div>
+
+            <div id="memoriesContent" class="flex-grow text-left space-y-3 overflow-y-auto pr-2">
+                <a href="../memories/Memory1/memory1.html" class="memory-item-link block p-4 bg-memory-item-bg hover:bg-memory-item-hover-bg rounded-lg transition-colors duration-200">
+                    <h2 class="text-xl font-semibold text-memory-item-text mb-1">The Day we Met ☀️</h2>
+                    <p class="text-content-box-text-secondary text-sm">
+                        The day when everything changed for us...
+                    </p>
+                </a>
+                <a href="../memories/Memory2/memory2.html" class="memory-item-link block p-4 bg-memory-item-bg hover:bg-memory-item-hover-bg rounded-lg transition-colors duration-200">
+                    <h2 class="text-xl font-semibold text-memory-item-text mb-1">Our Staybacks 🕰️🌙</h2>
+                    <p class="text-content-box-text-secondary text-sm">
+                        Those late evenings and extra moments together...
+                    </p>
+                </a>
+                <a href="../memories/Memory3/memory3.html" class="memory-item-link block p-4 bg-memory-item-bg hover:bg-memory-item-hover-bg rounded-lg transition-colors duration-200">
+                    <h2 class="text-xl font-semibold text-memory-item-text mb-1">Theeee mosttt scaryyy dayyy 😨</h2>
+                    <p class="text-content-box-text-secondary text-sm">
+                        A day that truly tested us...
+                    </p>
+                </a>
+                <a href="../memories/Memory4/memory3.html" class="memory-item-link block p-4 bg-memory-item-bg hover:bg-memory-item-hover-bg rounded-lg transition-colors duration-200">
+                    <h2 class="text-xl font-semibold text-memory-item-text mb-1">Supporttttt 💪❤️</h2>
+                    <p class="text-content-box-text-secondary text-sm">
+                        How we were there for each other...
+                    </p>
+                </a>
+                <a href="../memories/Memory5/memory3.html" class="memory-item-link block p-4 bg-memory-item-bg hover:bg-memory-item-hover-bg rounded-lg transition-colors duration-200">
+                    <h2 class="text-xl font-semibold text-memory-item-text mb-1">Late Night texts 📱💬</h2>
+                    <p class="text-content-box-text-secondary text-sm">
+                        Those conversations that lasted till morning...
+                    </p>
+                </a>
+                <a href="../memories/Memory6/memory3.html" class="memory-item-link block p-4 bg-memory-item-bg hover:bg-memory-item-hover-bg rounded-lg transition-colors duration-200">
+                    <h2 class="text-xl font-semibold text-memory-item-text mb-1">Our callsss 📞💕</h2>
+                    <p class="text-content-box-text-secondary text-sm">
+                        Hearing your voice was everything...
+                    </p>
+                </a>
+                <a href="../memories/Memory7/memory3.html" class="memory-item-link block p-4 bg-memory-item-bg hover:bg-memory-item-hover-bg rounded-lg transition-colors duration-200">
+                    <h2 class="text-xl font-semibold text-memory-item-text mb-1">Us meeting everyday 😊</h2>
+                    <p class="text-content-box-text-secondary text-sm">
+                        Those daily moments we cherished...
+                    </p>
+                </a>
+                <a href="../memories/Memory8/memory3.html" class="memory-item-link block p-4 bg-memory-item-bg hover:bg-memory-item-hover-bg rounded-lg transition-colors duration-200">
+                    <h2 class="text-xl font-semibold text-memory-item-text mb-1">Our fights 💥💔</h2>
+                    <p class="text-content-box-text-secondary text-sm">
+                        Even the tough times we faced...
+                    </p>
+                </a>
+                <a href="../memories/Memory9/memory3.html" class="memory-item-link block p-4 bg-memory-item-bg hover:bg-memory-item-hover-bg rounded-lg transition-colors duration-200">
+                    <h2 class="text-xl font-semibold text-memory-item-text mb-1">Our sorrys 🙏😔</h2>
+                    <p class="text-content-box-text-secondary text-sm">
+                        The moments of making amends...
+                    </p>
+                </a>
+                <a href="../memories/Memory10/memory3.html" class="memory-item-link block p-4 bg-memory-item-bg hover:bg-memory-item-hover-bg rounded-lg transition-colors duration-200">
+                    <h2 class="text-xl font-semibold text-memory-item-text mb-1">Our never ending time ⏳♾️</h2>
+                    <p class="text-content-box-text-secondary text-sm">
+                        When time just seemed to stop for us...
+                    </p>
+                </a>
+                <a href="../memories/Memory11/memory3.html" class="memory-item-link block p-4 bg-memory-item-bg hover:bg-memory-item-hover-bg rounded-lg transition-colors duration-200">
+                    <h2 class="text-xl font-semibold text-memory-item-text mb-1">Our Video callsss♾️</h2>
+                    <p class="text-content-box-text-secondary text-sm">
+                        When time just seemed to stop for us...
+                    </p>
+                </a>
+            </div>
+
+            <div class="flex-shrink-0 mt-auto pt-6 border-t border-gray-700"> 
+                <button id="backButton"
+                        class="w-full sm:w-auto bg-button-match-bg text-button-match-text border border-button-match-border
+                                hover:bg-button-match-hover-bg hover:border-button-match-hover-border
+                                text-lg font-semibold py-3 px-8 rounded-lg shadow-md transition-all duration-300 ease-in-out
+                                transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-accent-pink focus:ring-offset-2 focus:ring-offset-black">
+                    Back to Steps
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="memories.js"></script> 
+</body>
+</html>
